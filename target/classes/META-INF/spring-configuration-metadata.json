@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "name": "spring.dmpdb.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.test.dbutility.config.DMPDB",
+      "sourceMethod": "public javax.sql.DataSource postgresqlDataSource() "
+    },
+    {
+      "name": "spring.gmatdb.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.test.dbutility.config.GMATConfig",
+      "sourceMethod": "public javax.sql.DataSource mysqlDataSource() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.dmpdb.datasource.login-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "javax.sql.DataSource"
+    },
+    {
+      "name": "spring.dmpdb.datasource.login-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "javax.sql.DataSource"
+    },
+    {
+      "name": "spring.gmatdb.datasource.login-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "javax.sql.DataSource"
+    }
+  ],
+  "hints": []
+}
