@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.mail.MessagingException;
@@ -47,7 +48,13 @@ public class DBUtilityService {
 		return gmatdbRepo.getGMATStudy(study);
 	}
 	public List<Details> getDetails(List<String> pnames){
-		return dmpdbRepo.getDMPDetails(pnames);
+		List<Details> details = new ArrayList<>();
+		List<Object[]> lists = dmpdbRepo.getDMPDetails(pnames);
+		for(Object[] s :lists) {
+			Details det = new Details(String.valueOf(s[0]), String.valueOf(s[1]), String.valueOf(s[2]), Integer.parseInt(String.valueOf(s[3])));
+			details.add(det);
+		}
+		return details;
 	}
 	public List<Details> getFullDetails(){
 		return getDetails(getGMATStudy(getDMPStudy()));

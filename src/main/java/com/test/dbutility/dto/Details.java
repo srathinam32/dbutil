@@ -12,7 +12,7 @@ public class Details {
 	private String project;
 	private String projectLead;
 	private String emailAddress;
-	private Long issueCount;
+	private int issueCount;
 	
 	
 	/**
@@ -21,7 +21,7 @@ public class Details {
 	 * @param emailAddress
 	 * @param issueCount
 	 */
-	public Details(String project, String projectLead, String emailAddress, Long issueCount) {
+	public Details(String project, String projectLead, String emailAddress, int issueCount) {
 		super();
 		this.project = project;
 		this.projectLead = projectLead;
@@ -67,13 +67,13 @@ public class Details {
 	/**
 	 * @return the issueCount
 	 */
-	public Long getIssueCount() {
+	public int getIssueCount() {
 		return issueCount;
 	}
 	/**
 	 * @param issueCount the issueCount to set
 	 */
-	public void setIssueCount(Long issueCount) {
+	public void setIssueCount(int issueCount) {
 		this.issueCount = issueCount;
 	}
 	
